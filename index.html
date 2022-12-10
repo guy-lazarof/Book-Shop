@@ -13,22 +13,6 @@
   <button class='btn' onclick="onSetLang(this)" data-trans="switch-lang"></button>
   <br>
   <button class='btn' data-trans='add-btn' onclick='onAddBook()'>Add book</button>
-  <section class="book-filter">
-    <h4 class='filter-head'>Filter By Price</h4>
-    <select onchange="onSetFilter(this.value)">
-        <option value="all">All</option>
-        <option value="done">Done</option>
-        <option value="active">Active</option>
-    </select>
-</section>
-
-<section class="book-sort">
-    <h4 class='sort-head'>Sort By </h4>
-    <select onchange="onSetSort(this.value)">
-        <option value="title">title</option>
-        <option value="price">price</option>
-        <option value="rating">rating</option>
-    </select>
 </section>
 </header>
   <table class='books-table'>
