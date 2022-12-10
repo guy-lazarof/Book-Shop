@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bookApp</title>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body onload="onInit()">
+  <header>
+  <h1 data-trans='header'></h1>
+  <button class='btn' onclick="onSetLang(this)" data-trans="switch-lang"></button>
+  <br>
+  <button class='btn' data-trans='add-btn' onclick='onAddBook()'>Add book</button>
+  <section class="book-filter">
+    <h4 class='filter-head'>Filter By Price</h4>
+    <select onchange="onSetFilter(this.value)">
+        <option value="all">All</option>
+        <option value="done">Done</option>
+        <option value="active">Active</option>
+    </select>
+</section>
+
+<section class="book-sort">
+    <h4 class='sort-head'>Sort By </h4>
+    <select onchange="onSetSort(this.value)">
+        <option value="title">title</option>
+        <option value="price">price</option>
+        <option value="rating">rating</option>
+    </select>
+</section>
+</header>
+  <table class='books-table'>
+      <th data-trans='Id'></th>
+      <th data-trans='Title'></th>
+      <th data-trans='Price'></th>
+      <th data-trans='Rating'></th>
+      <th data-trans='Actions'></th>
+    <tbody class='table-body'>
+    </tbody>
+  </table>
+  <div class="modal">
+    <h4 class='modal-title' data-trans='modal-title' > title </h4>
+    <span class='book-title-span' ></span>
+    <h4 class='modal-price' data-trans='modal-price'></h4>
+    <span class='book-price-span' ></span>
+    <h4 class='modal-rate' data-trans='modal-rate'></h4>
+    <span class='modal-rate-span'></span>
+    <h5 data-trans='modal-description'></h5>
+    <p class='modal-description'></p>
+    <button class='btn' onclick="onCloseModal()" data-trans='modal-close-btn'></button>
+</div>
+  <script src="js/services/i18n.service.js"></script> 
+  <script src="js/services/util.service.js"></script>
+  <script src="js/services/storage.service.js"></script>
+  <script src="js/services/book-service.js"></script>
+  <script src="js/book-controller.js"></script>
+</body>
+</html>
